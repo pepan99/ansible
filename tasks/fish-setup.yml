@@ -1,0 +1,13 @@
+- name: Install fish
+  dnf: name=fish
+  tags: &tags_for_fish_tasks [ 'install', 'productivity', 'dotfiles', 'fish' ]
+    
+- name: Change shell to fish
+  shell: chsh -s $(which fish)
+  tags: *tags_for_fish_tasks
+
+- name: Oh-My-Fish
+  shell: curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+  tags: *tags_for_fish_tasks
+  become_user: pepan
+

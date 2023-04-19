@@ -1,0 +1,28 @@
+- name: Git personal setup email
+  git_config:
+    name: user.email
+    scope: global
+    value: "pepankrusina@gmail.com"
+  tags:
+  - git-personal
+- name: Git personal setup name
+  git_config:
+    name: user.name
+    scope: global
+    value: "pepan"
+  tags:
+  - git-personal
+- name: Kolibrik
+  git_config:
+    name: user.email
+    scope: global
+    value: "josef.krusina@kolibrik.net"
+  tags:
+  - git-kolibrik
+- name: Git personal setup name
+  git_config:
+    name: user.name
+    scope: global
+    value: "jkrusina"
+  tags:
+  - git-kolibrik
