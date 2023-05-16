@@ -7,9 +7,9 @@
     #    - include: tasks/ssh.yml
     - include: tasks/git-setup.yml
     - include: tasks/core-setup.yml
-      #- include: tasks/fish-setup.yml
+    - include: tasks/fish-setup.yml
     - include: tasks/nvim-setup.yml
     - include: tasks/dotfiles.yml
     - include: tasks/productivity-tools.yml
-    - include: tasks/lsp.yml
+      #    - include: tasks/lsp.yml
 
