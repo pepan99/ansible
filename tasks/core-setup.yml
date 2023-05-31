@@ -1,7 +1,7 @@
 - name: Install System Packages 2 (lua, unzip, libtool, libtool-bin, gettext)
   become: true
   dnf:
-    name: [ "lua5.1", "unzip", "gettext", "util-linux-user", "cmake"]
+    name: [ "lua5.1", "unzip", "gettext", "util-linux-user", "cmake", "g++"]
   tags:
     - install
     - neovim
