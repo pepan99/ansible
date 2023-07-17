@@ -1,5 +1,5 @@
 - name: Install fish
-  dnf: name=fish
+  apt: name=fish
   tags: &tags_for_fish_tasks [ 'install', 'productivity', 'dotfiles', 'fish' ]
     
 - name: Change shell to fish
