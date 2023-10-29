@@ -18,7 +18,7 @@
 - name: Install System Packages 3 (the rest)
   become: true
   apt:
-    name: ["curl", "htop", "picom", "golang", "lsof", "i3", "ccache", "ninja-build", "python3-pip", "dconf-editor", "nvidia-settings", "alacritty", "j4-dmenu-desktop"]
+    name: ["curl", "htop", "picom", "golang", "lsof", "i3", "ccache", "ninja-build", "python3-pip", "dconf-editor", "nvidia-settings", "alacritty", "j4-dmenu-desktop", "brightnessctl"]
   tags:
     - install
     - core
@@ -32,6 +32,10 @@
     - neovim
     - core
 
+# reboot still neccessary but user will reboot later anyways
+- name: Add user to video group for brightnessctl
+  become: true
+  shell: usermod -aG video ${USER}
 
 # - name: Install System Packages 2 (lua, unzip, libtool, libtool-bin, gettext)
 #   become: true
