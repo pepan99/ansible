@@ -8,4 +8,4 @@ sudo apt-get install -y curl git software-properties-common ansible
 sudo add-apt-repository ppa:aslatter/ppa -y
 sudo apt install -y alacritty
 ## pull ansible
-# sudo ansible-pull -U https://github.com/ThePrimeagen/ansible.git
+sudo ansible-pull -U https://github.com/pepan99/ansible.git
